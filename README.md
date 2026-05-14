@@ -13,3 +13,4 @@ Built as a learning project for exploring Web3 wallet architecture using React, 
 
 
 ->Architecture:
+![image alt](https://github.com/KrishnaGupta-create/Solana-Eth-Wallet/blob/352872313217555862a60ce5bd85aa3be8d46a5b/wallet_app_architecture.svg)
