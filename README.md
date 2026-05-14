@@ -42,6 +42,11 @@ npm install tweetnacl bip39 ed25519-hd-key @solana/web3.js sonner lucide-react
 5. **Frontend & Backend Communication**
    - The React frontend communicates with the Express backend through REST APIs.
    - The backend handles wallet derivation and blockchain interactions.
+  
+ ## 🚧 Note
+
+This is Version 0 of the project, built using fundamental Web3 and full-stack concepts for learning purposes.  
+The application will be improved in future versions with better architecture, enhanced security, additional features, and UI/UX improvements.
 
 
      
