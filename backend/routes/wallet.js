@@ -7,7 +7,7 @@ const { Wallet } = require("ethers");
 router.post("/generate",(req,res)=>{
     const mnemonic = bip39.generateMnemonic();
     const sol = deriveKeypair(mnemonic,0);
-    const eth = deriveEthkeypPair(mnemonic,0);
+    const eth = deriveEthKeypPair(mnemonic,0);
 
     res.json({
     mnemonic,
@@ -27,7 +27,7 @@ router.post("/derive",(req,res)=>{
     if (!mnemonic || index === undefined){
         return res.status(400).json({error : "mnemonic and index are required"});
     }
-    if (!mnemonic || index === undefined){
+    if (!bip39.validateMnemonic(mnemonic)){
         return res.status(400).json({error : "Invalid mnemonic phrase"});
     }
 

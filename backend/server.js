@@ -5,10 +5,10 @@ const balanceRoutes = require("./routes/balance");
 
 const app = express();
 
-app.use(cors());         // allow frontend on port 5173 to call this
-app.use(express.json()); // parse JSON request bodies
+app.use(cors());         
+app.use(express.json()); 
 
-// Mount routes
+//  routes
 app.use("/api/wallet", walletRoutes);
 app.use("/api/balance", balanceRoutes);
 

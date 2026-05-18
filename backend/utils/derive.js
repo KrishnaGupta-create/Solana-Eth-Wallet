@@ -5,11 +5,11 @@ const {Keypair} = require("@solana/web3.js");
 const {ethers} = require("ethers");
 
 function deriveKeypair(mnemonic,index){
-    const seed = bip39.mnemonicToSeedSync(mnemonic);
+    const seed  = bip39.mnemonicToSeedSync(mnemonic);
     const path = `m/44'/501'/${index}'/0'`;
-    const {key} = derivePath(path,seed.toString("hex"));
+    const {key}= derivePath(path,seed.toString("hex"));
     return Keypair.fromSecretKey(
-        nacl.sign.keyPair.fromSeed(key).secretKey
+      nacl.sign.keyPair.fromSecretKey(key).secretKey
     );
 }
 function deriveEthKeypair(mnemonic, index) {
