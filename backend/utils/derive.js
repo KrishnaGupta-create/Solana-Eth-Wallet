@@ -9,7 +9,7 @@ function deriveKeypair(mnemonic,index){
     const path = `m/44'/501'/${index}'/0'`;
     const {key}= derivePath(path,seed.toString("hex"));
     return Keypair.fromSecretKey(
-      nacl.sign.keyPair.fromSecretKey(key).secretKey
+      nacl.sign.keyPair.fromSeed(key.slice(0, 32)).secretKey
     );
 }
 function deriveEthKeypair(mnemonic, index) {

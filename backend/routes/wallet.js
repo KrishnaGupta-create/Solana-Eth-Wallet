@@ -7,7 +7,7 @@ const { Wallet } = require("ethers");
 router.post("/generate",(req,res)=>{
     const mnemonic = bip39.generateMnemonic();
     const sol = deriveKeypair(mnemonic,0);
-    const eth = deriveEthKeypPair(mnemonic,0);
+    const eth = deriveEthKeyPair(mnemonic,0);
 
     res.json({
     mnemonic,
